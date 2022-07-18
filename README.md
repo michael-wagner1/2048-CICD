@@ -138,3 +138,4 @@
 2. Log in to SonarQube (initial credentials: admin/admin), create a new project, and adapt CI/CD config accordingly
 "# 2048-CICD" 
 "# 2048-CICD" 
+"# 2048-CICD" 
