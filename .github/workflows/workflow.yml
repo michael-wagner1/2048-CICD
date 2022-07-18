@@ -52,13 +52,15 @@ jobs:
        with:
           name: jar-artifact
           
-     - uses: actions/upload-artifact@v2
+     - name: Package
+       run: mvn package
+       
+     - name: Save artifact
+       uses: actions/upload-artifact@v2
        with:
          name: build-artifact
          path: "target/game2048.war"
-          
-     - name: Package
-       run: mvn package
+     
     
   deploy:
    runs-on: self-hosted
