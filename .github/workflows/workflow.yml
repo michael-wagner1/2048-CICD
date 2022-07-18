@@ -35,7 +35,6 @@ jobs:
      - uses: actions/download-artifact@v2
        with:
           name: jar-artifact
-          path: "target/*"
             
      - name: Test
        run: mvn test
@@ -52,7 +51,11 @@ jobs:
      - uses: actions/download-artifact@v2
        with:
           name: jar-artifact
-          path: "target/*.war"
+          
+     - uses: actions/upload-artifact@v2
+       with:
+         name: build-artifact
+         path: "target/*.war"
           
      - name: Package
        run: mvn package
