@@ -1,0 +1,11 @@
+
+name: 2048-github-actions
+
+on: [push]
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-java@v1
+      - run: mvn compile
+      
