@@ -55,7 +55,7 @@ jobs:
      - uses: actions/upload-artifact@v2
        with:
          name: build-artifact
-         path: "target/*.war"
+         path: "target/game2048.war"
           
      - name: Package
        run: mvn package
