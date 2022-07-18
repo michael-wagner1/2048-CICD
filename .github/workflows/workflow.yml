@@ -68,6 +68,11 @@ jobs:
    
    steps:
    
+   - uses: actions/download-artifact@v2
+     with:
+      name: build-artifact
+      path: "target/game2048.war"
+   
    - name: Deploy
      run : |
       - docker rm --force tomcat
