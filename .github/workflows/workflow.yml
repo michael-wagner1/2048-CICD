@@ -58,8 +58,8 @@ jobs:
      - name: Save artifact
        uses: actions/upload-artifact@v2
        with:
-         name: build-artifact
-         path: "target/game2048.war"
+         name: war-artifact
+         path: target/game2048.war
      
     
   deploy:
@@ -67,14 +67,11 @@ jobs:
    needs: package
    
    steps:
-   
    - uses: actions/download-artifact@v2
      with:
-      name: build-artifact
+      name: war-artifact
       path: /usr/local/tomcat/webapps
-   
-   - name: Deploy
-     run : touch /usr/local/tomcat/webapps/nice.txt
+ 
 
        
    
