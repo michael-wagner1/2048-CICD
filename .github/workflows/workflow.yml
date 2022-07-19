@@ -73,7 +73,7 @@ jobs:
       name: build-artifact
    
    - name: Deploy
-     run : echo -e 'FROM tomcat:9-jdk17-openjdk-slim \n cp /usr/local/tomcat/pom.xml'
+     run : echo -e 'FROM tomcat:9-jdk17-openjdk-slim \n cp ./pom.xml /usr/local/tomcat/newpom.xml'
 
        
    
