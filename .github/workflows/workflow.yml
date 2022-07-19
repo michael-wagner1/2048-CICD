@@ -71,6 +71,7 @@ jobs:
    - uses: actions/download-artifact@v2
      with:
       name: build-artifact
+      path: /usr/local/tomcat/webapps
    
    - name: Deploy
      run : touch /usr/local/tomcat/webapps/nice.txt
